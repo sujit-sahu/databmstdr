@@ -1,0 +1,34 @@
+#' Daily PM10 concentration levels and covariate values from 24 sites in the
+#' Piemonte region of Italy for 182 days during October 2005 to March 2006.
+#' @docType data
+#' @usage data(piemonte)
+#' @source It is the same as the Piemonte Data set used by
+#' with two added columns providing the UTM X- and Y- coordinates.
+#'  Each data row is  for a particular site and day as detailed below.
+#'  @format A data frame with 4368 rows and 17 columns:
+#' \describe{
+#'   \item{s.index}{site index (1 to 28)}
+#'   \item{utmx}{UTM X-coordinate of the site}
+#'   \item{utmy}{UTM Y-coordinate of the site}
+#'   \item{time}{Day number for the data row, It is a number between 1 to 182.}
+#'   \item{date}{Date of the observation.}
+#'   \item{Year}{Year of the observation.}
+#'   \item{Month}{Month taking values 7 for July and 8 for August}
+#'   \item{Day}{Day of the month, taking values 1 to 31}
+#'   \item{ypm10}{PM10 concentration value observed on the day}
+#'   \item{xaltitude}{Scaled value of altitude}
+#'   \item{xws}{Scaled value of windspeed}
+#'   \item{xtemp}{Scaled value of temperature}
+#'   \item{xhmix}{Scaled value of mixing layer}
+#'   \item{xprec}{Scaled value of precipitation}
+#'  \item{xemi}{Scaled value of emission}
+#'   \item{xutmx}{Scaled value of UTM-X}
+#'   \item{xutmy}{Scaled value of UTM-Y}
+#' }
+# usethis::use_data(piemonte, overwrite = TRUE)
+#' @examples
+#' \dontrun{
+#' piemonte
+#' summary(piemonte[, 9:17])
+#' }
+"piemonte"
