@@ -100,8 +100,17 @@ fig11.13.plot <- function(yobs, ylow, ymed, yup, misst) {
 #' @return Integer vector providing the row numbers of the data frame for validation.
 #' Output of this function is suitable as the argument \code{validrows} for the
 #' \code{bmstdr} model fitting functions \code{Bsptime, Bcartime}.
+#' #' @examples
+#' \dontrun{
+#' # To validate at site numbers 1, 5, and 10 at 31 randomly selected
+#' # time points for the nysptime data set we issue the following commands
+#' set.seed(44)
+#' vt <- sample(62, 31)
+#' vrows <- getvalidows(sn=28, tn=62, valids=c(1, 5, 10), validt=vt)
+#' vrows <- getvalidrows(sn=28, tn=62, valids=c(1, 2), allt=T)
+#' }
 #' @export
-getvalidrows <- function(sn=28, tn=62, valids=c(1,2), validt=NULL, allt=F) {
+getvalidrows <- function(sn, tn, valids, validt=NULL, allt=F) {
   # Assumes data are sorted first by site and then by time
   if (allt) {
     validt <- 1:tn

@@ -1,6 +1,6 @@
 Package: databmstdr
 Type: Package
-Title: Data Sets and Additional Useful Functions for Bayesian Modelling of Spatio-Temporal Data with W
+Title: Data Sets and Additional Useful Functions for Bayesian Modelling of Spatio-Temporal Data
 Version: 0.1.0
 Author: Sujit K. Sahu [aut, cre]  
 Maintainer: Sujit K. Sahu <S.K.Sahu@soton.ac.uk>
