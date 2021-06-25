@@ -4,7 +4,7 @@
 \alias{getvalidrows}
 \title{Returns a vector of row numbers for validation.}
 \usage{
-getvalidrows(sn = 28, tn = 62, valids = c(1, 2), validt = NULL, allt = F)
+getvalidrows(sn, tn, valids, validt = NULL, allt = F)
 }
 \arguments{
 \item{sn}{The total number of spatial locations.}
@@ -24,4 +24,14 @@ Output of this function is suitable as the argument \code{validrows} for the
 }
 \description{
 Returns a vector of row numbers for validation.
+}
+\examples{
+\dontrun{
+# To validate at site numbers 1, 5, and 10 at 31 randomly selected
+# time points for the nysptime data set we issue the following commands
+set.seed(44)
+vt <- sample(62, 31)
+vrows <- getvalidows(sn=28, tn=62, valids=c(1, 5, 10), validt=vt)
+vrows <- getvalidrows(sn=28, tn=62, valids=c(1, 2), allt=T)
+}
 }
