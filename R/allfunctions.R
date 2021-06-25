@@ -109,7 +109,7 @@ fig11.13.plot <- function(yobs, ylow, ymed, yup, misst) {
 #' vrows <- getvalidrows(sn=28, tn=62, valids=c(1, 5, 10), validt=vt)
 #' # To validate at sites 1 and 2 at all time points
 #' vrows <- getvalidrows(sn=28, tn=62, valids=c(1, 2), allt=T)
-#'
+#' # This is a line from RStudio
 #' }
 #' @export
 getvalidrows <- function(sn, tn, valids, validt=NULL, allt=F) {
