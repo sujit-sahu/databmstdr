@@ -19,8 +19,9 @@ fig11.13.plot(yobs, ylow, ymed, yup, misst)
 values}
 }
 \value{
-A ribbon plot which shows observed values in red color and open circle,
-predicted values in blue color and filled circle,
+A ribbon plot,  ggplot2 object,  which shows observed values
+in red color and open circle, predicted values in blue color and
+filled circle.
 }
 \description{
 Draws a time series (ribbon) plot by combining fitted and predicted values

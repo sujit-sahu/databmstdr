@@ -2,7 +2,7 @@
 % Please edit documentation in R/allfunctions.R
 \name{materncov}
 \alias{materncov}
-\title{Banerjee et al Matern covariance function}
+\title{Banerjee, Carlin and Gelfand (2015) Matern covariance function}
 \usage{
 materncov(d, phi, nu)
 }
@@ -17,5 +17,5 @@ materncov(d, phi, nu)
 Returns the Matern covariance for distance object d
 }
 \description{
-Banerjee et al Matern covariance function
+Banerjee, Carlin and Gelfand (2015) Matern covariance function
 }

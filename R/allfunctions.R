@@ -2,10 +2,11 @@
 #' @import grid
 #' @import maps
 #' @importFrom stats na.omit
+#' @importFrom Rdpack reprompt
 NULL
 utils::globalVariables(c("x"))
 NULL
-#' Banerjee et al Matern covariance function
+#' Banerjee, Carlin and Gelfand (2015) Matern covariance function
 #' @param d is the distance
 #' @param phi is the rate of decay
 #' @param nu is the smoothness parameter
@@ -32,6 +33,9 @@ maternfun <- function(d, phi, nu) {
 #' This function is used to delete values outside the state of New York
 #' @param xyz A list containing the x values, y values and
 #' interpolated z values at each x and y pair.
+#' @return Returns the input but with NA placed in z values corresponding to
+#' the locations whose x-y coordinates are outside the land boundary of the
+#' USA.
 #' @export
 fnc.delete.map.XYZ <- function(xyz){
   x <- xyz$x
@@ -65,8 +69,9 @@ fnc.delete.map.XYZ <- function(xyz){
 #' @param yup A vector of the upper limits of the fitted or predicted values
 #' @param misst An integer vector which contains the indices of the predicted
 #' values
-#' @return A ribbon plot which shows observed values in red color and open circle,
-#' predicted values in blue color and filled circle,
+#' @return A ribbon plot,  ggplot2 object,  which shows observed values
+#' in red color and open circle, predicted values in blue color and
+#' filled circle.
 #' @export
 #'
 fig11.13.plot <- function(yobs, ylow, ymed, yup, misst) {

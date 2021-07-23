@@ -10,6 +10,11 @@ fnc.delete.map.XYZ(xyz)
 \item{xyz}{A list containing the x values, y values and
 interpolated z values at each x and y pair.}
 }
+\value{
+Returns the input but with NA placed in z values corresponding to
+the locations whose x-y coordinates are outside the land boundary of the
+USA.
+}
 \description{
 This function is used to delete values outside the state of New York
 }
