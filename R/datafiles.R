@@ -1,3 +1,11 @@
+#' @import ggplot2
+#' @import grid
+#' @import maps
+#' @importFrom stats na.omit
+#' @importFrom Rdpack reprompt
+NULL
+utils::globalVariables(c("x"))
+NULL
 #' Data frame providing the polygons for plotting the map of
 #' local authorities in England
 #' @source
